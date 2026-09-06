@@ -3,11 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Youngmin Kim | Curriculum Vitae</title>
   <meta name="description"
         content="Youngmin Kim — M.S. Student in Industrial and Systems Engineering at Dongguk University.">
-
   <style>
     :root {
       --accent: #1F3A5F;
@@ -16,15 +14,12 @@
       --light: #F6F7F9;
       --line: #D9DEE5;
     }
-
     * {
       box-sizing: border-box;
     }
-
     html {
       scroll-behavior: smooth;
     }
-
     body {
       margin: 0;
       background: white;
@@ -32,57 +27,63 @@
       font-family: Georgia, "Times New Roman", serif;
       line-height: 1.55;
     }
-
     .container {
       width: min(980px, 90%);
       margin: 0 auto;
     }
-
     /* Header */
-
     header {
       padding: 55px 0 28px;
       border-bottom: 2px solid var(--accent);
     }
-
     .header-row {
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
-      gap: 30px;
+      gap: 36px;
     }
-
     h1 {
       margin: 0;
       color: var(--accent);
       font-size: 2.8rem;
       letter-spacing: 0.02em;
     }
-
     .subtitle {
       margin-top: 12px;
       font-size: 1.08rem;
     }
-
     .affiliation {
       margin-top: 3px;
       color: var(--muted);
     }
-
     .contact {
       margin-top: 12px;
       font-size: 0.95rem;
     }
-
     a {
       color: var(--accent);
       text-decoration: none;
     }
-
     a:hover {
       text-decoration: underline;
     }
-
+    /* Photo + CV button column */
+    .header-side {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+      flex-shrink: 0;
+    }
+    .profile-photo {
+      width: 150px;
+      height: 190px;
+      object-fit: cover;
+      object-position: center top;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      display: block;
+    }
     .cv-button {
       display: inline-block;
       padding: 10px 18px;
@@ -95,21 +96,17 @@
       white-space: nowrap;
       transition: 0.2s ease;
     }
-
     .cv-button:hover {
       background: var(--accent);
       color: white;
       text-decoration: none;
     }
-
     /* Navigation */
-
     nav {
       border-bottom: 1px solid var(--line);
       font-family: Arial, sans-serif;
       font-size: 0.9rem;
     }
-
     nav .container {
       display: flex;
       gap: 24px;
@@ -117,26 +114,20 @@
       padding-top: 13px;
       padding-bottom: 13px;
     }
-
     nav a {
       color: #444;
       white-space: nowrap;
     }
-
     nav a:hover {
       color: var(--accent);
     }
-
     /* Main */
-
     main {
       padding: 20px 0 60px;
     }
-
     section {
       margin-top: 34px;
     }
-
     h2 {
       margin: 0 0 18px;
       color: var(--accent);
@@ -147,51 +138,41 @@
       border-bottom: 2px solid var(--accent);
       padding-bottom: 5px;
     }
-
     h3 {
       color: var(--accent);
       font-size: 1rem;
       font-style: italic;
       margin: 22px 0 12px;
     }
-
     .interests {
       color: #333;
     }
-
     .dot {
       color: var(--muted);
       margin: 0 7px;
     }
-
     /* CV entries */
-
     .entry {
       display: grid;
       grid-template-columns: 170px 1fr;
       gap: 24px;
       margin-bottom: 17px;
     }
-
     .date {
       color: var(--muted);
       font-size: 0.9rem;
     }
-
     .entry-title {
       font-weight: bold;
     }
-
     .organization {
       margin-top: 1px;
     }
-
     .detail {
       margin-top: 3px;
       color: var(--muted);
       font-size: 0.9rem;
     }
-
     .note {
       display: grid;
       grid-template-columns: 170px 1fr;
@@ -200,37 +181,28 @@
       margin-bottom: 18px;
       font-size: 0.9rem;
     }
-
     /* Publications */
-
     .pub-list {
       padding-left: 26px;
       margin: 0;
     }
-
     .pub-list li {
       margin-bottom: 12px;
       padding-left: 4px;
     }
-
     .me {
       font-weight: bold;
     }
-
     .venue {
       font-style: italic;
     }
-
     /* Awards */
-
     .item-list {
       padding-left: 20px;
     }
-
     .item-list li {
       margin-bottom: 13px;
     }
-
     .project-title {
       color: var(--muted);
       font-size: 0.9rem;
@@ -238,9 +210,7 @@
       display: block;
       margin-top: 3px;
     }
-
     /* Footer */
-
     footer {
       border-top: 1px solid var(--line);
       margin-top: 50px;
@@ -251,75 +221,71 @@
       display: flex;
       justify-content: space-between;
     }
-
     @media (max-width: 700px) {
-
       header {
         padding-top: 35px;
       }
-
       .header-row {
-        flex-direction: column;
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        gap: 22px;
       }
-
+      .header-side {
+        flex-direction: row;
+        align-items: flex-end;
+        gap: 18px;
+      }
+      .profile-photo {
+        width: 110px;
+        height: 140px;
+      }
       h1 {
         font-size: 2.2rem;
       }
-
       .entry,
       .note {
         grid-template-columns: 1fr;
         gap: 3px;
       }
-
       .date {
         margin-bottom: 2px;
       }
-
       footer {
         flex-direction: column;
         gap: 5px;
       }
     }
-
   </style>
 </head>
-
 <body>
-
 <header>
   <div class="container header-row">
-
     <div>
       <h1>Youngmin Kim</h1>
-
       <div class="subtitle">
         M.S. Student, Department of Industrial and Systems Engineering
       </div>
-
       <div class="affiliation">
         Dongguk University, Seoul, Republic of Korea
       </div>
-
       <div class="contact">
         <a href="mailto:2026120366@dgu.ac.kr">
           2026120366@dgu.ac.kr
         </a>
       </div>
     </div>
-
-    <div>
+    <div class="header-side">
+      <img class="profile-photo"
+           src="profile_photo.jpg"
+           alt="Portrait of Youngmin Kim">
       <a class="cv-button"
          href="cv/Youngmin_Kim_CV.pdf"
          target="_blank">
          CV (PDF)
       </a>
     </div>
-
   </div>
 </header>
-
-
 <nav>
   <div class="container">
     <a href="#research">Research</a>
@@ -332,16 +298,10 @@
     <a href="#awards">Awards</a>
   </div>
 </nav>
-
-
 <main class="container">
-
   <!-- Research Interests -->
-
   <section id="research">
-
     <h2>Research Interests</h2>
-
     <div class="interests">
       Interpretable Machine Learning
       <span class="dot">·</span>
@@ -351,58 +311,41 @@
       <span class="dot">·</span>
       Intelligent Manufacturing
     </div>
-
   </section>
-
-
   <!-- Education -->
-
   <section id="education">
-
     <h2>Education</h2>
-
     <div class="entry">
       <div class="date">2028 (Expected)</div>
-
       <div>
         <div class="entry-title">
           M.S. in Industrial and Systems Engineering
         </div>
-
         <div class="organization">
           Dongguk University, Seoul, Republic of Korea
         </div>
-
         <div class="detail">
           Advisor: Dr. Sungbum Jun
         </div>
       </div>
     </div>
-
-
     <div class="entry">
       <div class="date">2025</div>
-
       <div>
         <div class="entry-title">
           B.S. in Industrial and Systems Engineering
         </div>
-
         <div class="organization">
           Dongguk University, Seoul, Republic of Korea
         </div>
-
         <div class="detail">
           GPA: 3.73/4.00 · Major GPA: 3.86/4.00 ·
           <strong>Graduation Honors</strong>
         </div>
       </div>
     </div>
-
-
     <div class="note">
       <div></div>
-
       <div>
         <em>Selected Major Coursework (A+):</em>
         Management Science 1,
@@ -413,98 +356,67 @@
         and Logistics
       </div>
     </div>
-
   </section>
-
-
- <!-- Working Papers -->
-
-<section id="papers">
-
-  <h2>Working Papers</h2>
-
-  <ol class="pub-list">
-
-    <li>
-      <span class="me">Kim, Y.</span>,
-      Lee, C., &amp; Jun, S. (2026).
-      BONSAI: A Matheuristic for Depth-Constrained Decision Tree
-      Induction with Multi-Way Splits.
-      <span class="venue">
-        Under review at INFORMS Journal on Computing.
-      </span>
-    </li>
-
-    <li>
-      <span class="me">Kim, Y.</span>,
-      Lee, C., &amp; Jun, S. (2026).
-      DWARF: An Evolutionary Discretization Framework for Accurate
-      and Interpretable Depth-Limited Decision Trees.
-      <span class="venue">
-        Under review at Swarm and Evolutionary Computation.
-      </span>
-    </li>
-
-  </ol>
-
-</section>
-
-
+  <!-- Working Papers -->
+  <section id="papers">
+    <h2>Working Papers</h2>
+    <ol class="pub-list">
+      <li>
+        <span class="me">Kim, Y.</span>,
+        Lee, C., &amp; Jun, S. (2026).
+        BONSAI: A Matheuristic for Depth-Constrained Decision Tree
+        Induction with Multi-Way Splits.
+        <span class="venue">
+          Under review at INFORMS Journal on Computing.
+        </span>
+      </li>
+      <li>
+        <span class="me">Kim, Y.</span>,
+        Lee, C., &amp; Jun, S. (2026).
+        DWARF: An Evolutionary Discretization Framework for Accurate
+        and Interpretable Depth-Limited Decision Trees.
+        <span class="venue">
+          Under review at Swarm and Evolutionary Computation.
+        </span>
+      </li>
+    </ol>
+  </section>
   <!-- Research Experience -->
-
   <section id="experience">
-
     <h2>Research Experience</h2>
-
     <div class="entry">
       <div class="date">Feb.–Aug. 2026</div>
-
       <div>
         <div class="entry-title">
           Data Inspiring Camp — Manufacturing Data Analysis
         </div>
-
         <div class="organization">
           Kia Motors
         </div>
-
         <div class="detail">
           Decision-tree-based anomaly detection for manufacturing
           inspection data
         </div>
       </div>
     </div>
-
-
     <h2>Industry Experience</h2>
-
     <div class="entry">
       <div class="date">Jul.–Dec. 2024</div>
-
       <div>
         <div class="entry-title">
           Production Planning Intern
         </div>
-
         <div class="organization">
           Continental, Sejong, Republic of Korea
         </div>
       </div>
     </div>
-
   </section>
-
-
   <!-- Presentations -->
-
   <section id="presentations">
-
     <h2>Presentations</h2>
-
     <h3>International Conferences</h3>
-
     <ol class="pub-list">
-
       <li>
         <span class="me">Kim, Y.</span>,
         Kim, D., Lee, C., &amp; Jun, S. (2026).
@@ -516,7 +428,17 @@
           Texas, USA.
         </span>
       </li>
-
+      <li>
+        <span class="me">Kim, Y.</span>,
+        Kim, D., Lee, C., &amp; Jun, S. (2026).
+        Minimizing Total Weighted Tardiness in Parallel Machine
+        Scheduling with Sequence-Dependent Setup Times via
+        Fine-Tuned Large Language Models.
+        <span class="venue">
+          JIMA 2026,
+          Hakodate, Japan.
+        </span>
+      </li>
       <li>
         <span class="me">Kim, Y.</span>,
         Lee, C., &amp; Jun, S. (2026).
@@ -528,58 +450,53 @@
         </span>
         <em>(Scheduled)</em>
       </li>
-
     </ol>
-
+    <h3>Domestic Conferences</h3>
+    <ol class="pub-list">
+      <li>
+        <span class="me">Kim, Y.</span>,
+        Lee, C., &amp; Jun, S. (2026).
+        BONSAI: A Matheuristic for Depth-Constrained Decision Tree
+        Induction with Multi-Way Splits.
+        <span class="venue">
+          2026 Spring Conference of the Korean Society of
+          Digital Industry,
+          Seongnam, Republic of Korea.
+        </span>
+      </li>
+    </ol>
   </section>
-
-
   <!-- Workshops -->
-
   <section id="training">
-
     <h2>Workshops &amp; Training</h2>
-
     <div class="entry">
       <div class="date">Jun. 9–11, 2026</div>
-
       <div>
         <div class="entry-title">
           SME Week — Smart Manufacturing Training Program
         </div>
-
         <div class="organization">
           Apple Manufacturing R&amp;D Accelerator,
           POSTECH, Pohang, Republic of Korea
         </div>
       </div>
     </div>
-
-
     <div class="entry">
       <div class="date">Jan. 26–30, 2026</div>
-
       <div>
         <div class="entry-title">
           2025/26 CALOP Winter Lecture
         </div>
-
         <div class="organization">
           Center for Algorithm and Optimization (CALOP),
           POSTECH, Pohang, Republic of Korea
         </div>
       </div>
     </div>
-
   </section>
-
-
   <!-- Skills -->
-
   <section id="skills">
-
     <h2>Technical Skills</h2>
-
     <div>
       <strong>Programming:</strong> Python
       <span class="dot">·</span>
@@ -589,50 +506,34 @@
       <span class="dot">·</span>
       <strong>Typesetting:</strong> LaTeX
     </div>
-
   </section>
-
-
   <!-- Awards -->
-
   <section id="awards">
-
     <h2>Awards &amp; Scholarships</h2>
-
     <ul class="item-list">
-
       <li>
         <strong>Dongguk Founding Scholarship, 2nd Cohort</strong>
         · Full-Tuition Scholarship · 2023–2025
       </li>
-
       <li>
         <strong>
           Honorable Mention, Undergraduate Student Project Competition
         </strong>
         · Korean Institute of Industrial Engineers (KIIE)
         · Oct. 2024
-
         <span class="project-title">
           Optimization of Waste Collection Vehicle Scheduling
           Using Metaheuristic Algorithms
         </span>
       </li>
-
     </ul>
-
   </section>
-
-
 </main>
-
-
 <div class="container">
   <footer>
     <div>Youngmin Kim · Curriculum Vitae</div>
-    <div>Last updated: August 2026</div>
+    <div>Last updated: September 2026</div>
   </footer>
 </div>
-
 </body>
 </html>
